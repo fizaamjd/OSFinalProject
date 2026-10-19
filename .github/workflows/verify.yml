@@ -20,5 +20,6 @@ jobs:
       - name: Verify repository
         run: |
           python3 scripts/check-docs.py
+          make clean
           make
           make check

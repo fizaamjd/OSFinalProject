@@ -1,6 +1,7 @@
 # Verification
 
 ```sh
+make clean
 make
 make check
 ```
