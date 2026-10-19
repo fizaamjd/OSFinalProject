@@ -38,7 +38,7 @@ This is a GTK desktop teaching project running on Ubuntu, not a standalone OS. U
 
 https://github.com/user-attachments/assets/77cb4711-2194-43ed-afe5-c23c3a4e1224
 
-[Original project demonstration and LinkedIn post](https://lnkd.in/p/d_2DEMH8). The edited presentation uses footage from that original demonstration. The current source restores Notepad as a UTF-8 editor because the historical Notepad.c contained duplicated file-manager code; the video remains a record of the 2024 project.
+[Original project demonstration and LinkedIn post](https://lnkd.in/p/d_2DEMH8). The edited presentation uses footage from that original demonstration. The current source restores Calculator as a four-operation utility and Notepad as a UTF-8 editor because the historical Notepad.c contained duplicated file-manager code; the video remains a record of the 2024 project.
 
 ## Maintenance
 

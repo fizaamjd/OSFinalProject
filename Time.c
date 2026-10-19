@@ -2,24 +2,13 @@
 #include <time.h>
 #include <string.h>
 
-void update_clock(GtkLabel *label) {
-    time_t rawtime;
-    struct tm *timeinfo;
-
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
-
-    char buffer[50]; // HH:MM:SS [Time Zone]\0
-    strftime(buffer, sizeof(buffer), "%H:%M:%S", timeinfo);
-
-    // Append time zone information
-    char tz[6];
-    strftime(tz, sizeof(tz), "%Z", timeinfo);
-    strcat(buffer, " [");
-    strcat(buffer, tz);
-    strcat(buffer, "]");
-
-    gtk_label_set_text(label, buffer);
+static gboolean update_clock(gpointer data) {
+    time_t now = time(NULL);
+    struct tm *info = localtime(&now);
+    char buffer[80];
+    if (info && strftime(buffer, sizeof buffer, "%H:%M:%S [%Z]", info))
+        gtk_label_set_text(GTK_LABEL(data), buffer);
+    return G_SOURCE_CONTINUE;
 }
 
 int main(int argc, char *argv[]) {
@@ -35,7 +24,8 @@ int main(int argc, char *argv[]) {
 
     gtk_container_add(GTK_CONTAINER(window), label);
 
-    g_timeout_add(1000, (GSourceFunc)update_clock, label); // Update every second
+    update_clock(label);
+    g_timeout_add(1000, update_clock, label); // Update every second
 
     gtk_widget_show_all(window);
 
