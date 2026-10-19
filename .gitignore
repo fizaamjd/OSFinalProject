@@ -1,0 +1,31 @@
+
+# Local configuration and generated maintenance artifacts
+.env
+.env.*
+!.env.example
+!.env.local.example
+node_modules/
+.next/
+dist/
+out/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.impeccable/
+.claude/
+.DS_Store
+
+# Locally compiled programs
+/my_os
+/calculator
+/calender
+/clock
+/filemanager
+/notepad
+/minsweeper
+/tictactoe
+/allocate-memory
+/access-hard-drive
+/utilize-cores

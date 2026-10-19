@@ -1,0 +1,40 @@
+{
+  "source": "https://lnkd.in/p/d_2DEMH8",
+  "author": "Fiza Amjad",
+  "description": "Edited original project demonstration; titles distinguish simulation from host kernel behavior. Original audio omitted.",
+  "original_dimensions": [
+    1200,
+    640
+  ],
+  "export_dimensions": [
+    1200,
+    1200
+  ],
+  "duration_seconds": 48,
+  "chapters": [
+    {
+      "source_start_seconds": 10,
+      "title": "CustomOS"
+    },
+    {
+      "source_start_seconds": 24,
+      "title": "Everyday tools"
+    },
+    {
+      "source_start_seconds": 63,
+      "title": "Launch a task"
+    },
+    {
+      "source_start_seconds": 92,
+      "title": "Make room for play"
+    },
+    {
+      "source_start_seconds": 116,
+      "title": "Inspect processes"
+    },
+    {
+      "source_start_seconds": 133,
+      "title": "Resources, explained"
+    }
+  ]
+}

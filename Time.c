@@ -1,5 +1,6 @@
 #include <gtk/gtk.h>
 #include <time.h>
+#include <string.h>
 
 void update_clock(GtkLabel *label) {
     time_t rawtime;

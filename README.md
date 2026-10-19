@@ -1,32 +1,52 @@
-My Operating System
+# CustomOS
 
-My Operating System is a custom-built operating system designed for Ubuntu Linux, implemented in C using the GTK library for a graphical user interface. This operating system provides two distinct modes of operation: User Mode and Kernel Mode, each tailored for different types of tasks and administrative control.
+A C and GTK 3 desktop simulator for Ubuntu, with utility apps, process inspection, task launching and simulated resource budgets.
 
-User Mode
-In User Mode, users can perform a variety of everyday tasks with a simple and intuitive interface. The applications available in User Mode include:
+[![Verify](https://github.com/fizaamjd/OSFinalProject/actions/workflows/verify.yml/badge.svg)](https://github.com/fizaamjd/OSFinalProject/actions/workflows/verify.yml)
 
-Calculator: A basic arithmetic calculator for performing mathematical calculations.
-Calendar: A calendar application to view dates and manage events.
-Notepad: A text editor for creating and editing text documents.
-File Manager: An interface to navigate the file system, manage files and directories.
-Clock: A clock application to view the current time.
-Games: Enjoy two classic games, Minesweeper and Tic-Tac-Toe, for some leisure time.
-Kernel Mode
-Kernel Mode is designed for system administrators and power users who need more control over system resources and processes. The features in Kernel Mode include:
+## Overview
 
-View Processes: A comprehensive view of all the processes running on the system. This allows users to monitor system activity and resource usage.
-Cancel Processes: The ability to terminate running processes by specifying their process ID (PID). This is useful for stopping unresponsive or unwanted applications.
-Set Task Resources: Allocate specific amounts of RAM, hard drive space, and CPU cores to individual tasks. This feature helps manage system resources efficiently and ensures that critical applications have the resources they need.
-Technical Details
-Programming Language: C
-GUI Library: GTK (GIMP Toolkit)
-Operating System: Ubuntu Linux
-Resource Management: Allows dynamic allocation of RAM, hard drive space, and CPU cores.
-Process Management: View and terminate processes to maintain system stability and performance.
-Architecture
-Main Window: The primary interface with buttons to switch between User Mode and Kernel Mode.
-Loading Screen: Displays a loading message at startup, followed by a system specifications screen.
-User Mode Interface: A grid layout with icons representing the various applications.
-Kernel Mode Interface: A dialog with options to view processes, cancel processes, and set task resources.
-My Operating System combines functionality and ease of use with a clean and user-friendly interface. It is designed to provide both regular users and system administrators with the tools they need to perform their tasks efficiently and effectively.
+Main.c creates the GTK shell. Utilities are independent C programs launched through gnome-terminal using fork and exec. RAM, disk and core budgets are counters, not OS-enforced quotas. User Mode and Kernel Mode are UI labels; this is not a bootable kernel or privilege boundary.
 
+## Getting started
+
+```sh
+git clone https://github.com/fizaamjd/OSFinalProject.git
+cd OSFinalProject
+make
+make check
+```
+
+Install prerequisites first:
+
+```sh
+sudo apt-get install build-essential libgtk-3-dev pkg-config gnome-terminal
+make
+./my_os
+```
+
+## Included applications
+
+Calculator, calendar, text editor, file manager, clock, Minesweeper and Tic-Tac-Toe. Original filenames such as `Calender.c` and `MinSweeper.c` are retained. Three console helpers demonstrate resource inputs; they do not allocate host RAM, disk or CPU capacity.
+
+## Limits and safe execution
+
+This is a GTK desktop teaching project running on Ubuntu, not a standalone OS. UI modes do not implement CPU privilege rings, a custom scheduler or preemptive context switching. The host Linux kernel schedules spawned processes. Process cancellation and file operations affect the host; use a disposable VM and never run as root. Compile from source rather than trusting historical checked-in binaries.
+
+## Live demo video
+
+https://github.com/user-attachments/assets/77cb4711-2194-43ed-afe5-c23c3a4e1224
+
+[Original project demonstration and LinkedIn post](https://lnkd.in/p/d_2DEMH8). The edited presentation uses footage from that original demonstration.
+
+## Maintenance
+
+- [Architecture](docs/architecture.md)
+- [Configuration](docs/configuration.md)
+- [Verification](docs/testing.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
+- [Support](SUPPORT.md)
+- [License scope](docs/license-scope.md)
+
+Original coursework history and contributors are preserved.
