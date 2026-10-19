@@ -9,6 +9,7 @@ static gboolean read_number(GtkWidget *entry, double *value) {
     char *end;
     errno = 0;
     *value = g_ascii_strtod(text, &end);
+    if (end == text) return FALSE;
     while (g_ascii_isspace(*end)) ++end;
     return end != text && *end == '\0' && errno != ERANGE && isfinite(*value);
 }
