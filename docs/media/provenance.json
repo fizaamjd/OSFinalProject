@@ -1,40 +1,14 @@
 {
-  "source": "https://lnkd.in/p/d_2DEMH8",
+  "reference": "https://lnkd.in/p/d_2DEMH8",
   "author": "Fiza Amjad",
-  "description": "Edited original project demonstration; titles distinguish simulation from host kernel behavior. Original audio omitted.",
-  "original_dimensions": [
-    1200,
-    640
-  ],
+  "format": "Self-contained HTML, CSS, inline SVG and embedded display font; no video dependency",
+  "description": "Animated reconstruction of the GTK project interface. Process IDs and resource budgets are illustrative. The Linux host retains real scheduling and privileges.",
   "export_dimensions": [
     1200,
     1200
   ],
-  "duration_seconds": 48,
-  "chapters": [
-    {
-      "source_start_seconds": 10,
-      "title": "CustomOS"
-    },
-    {
-      "source_start_seconds": 24,
-      "title": "Everyday tools"
-    },
-    {
-      "source_start_seconds": 63,
-      "title": "Launch a task"
-    },
-    {
-      "source_start_seconds": 92,
-      "title": "Make room for play"
-    },
-    {
-      "source_start_seconds": 116,
-      "title": "Inspect processes"
-    },
-    {
-      "source_start_seconds": 133,
-      "title": "Resources, explained"
-    }
-  ]
+  "duration_seconds": 68,
+  "fps": 24,
+  "export_sha256": "f8d1067cca62d3c27decbd5353d72204df689d4041c0aa10b0024ca741595a77",
+  "source": "public/motion/os-final-project.html"
 }

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Replace the footage-based preview with a self-contained 68-second HTML/CSS/SVG animation and matching README video export. Include standalone source, provenance and checksums.
+
 - Restore Calculator as a four-operation GTK utility; historical Calculator.c contained an incomplete second shell implementation. Validate numeric inputs, division by zero and non-finite results.
 - Correct the clock timer callback signature and bounded timezone formatting.
 

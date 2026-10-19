@@ -36,9 +36,11 @@ This is a GTK desktop teaching project running on Ubuntu, not a standalone OS. U
 
 ## Live demo video
 
-https://github.com/user-attachments/assets/77cb4711-2194-43ed-afe5-c23c3a4e1224
+https://github.com/user-attachments/assets/be2689ca-0a5c-4c1e-a41c-60321e249e65
 
-[Original project demonstration and LinkedIn post](https://lnkd.in/p/d_2DEMH8). The edited presentation uses footage from that original demonstration. The current source restores Calculator as a four-operation utility and Notepad as a UTF-8 editor because the historical Notepad.c contained duplicated file-manager code; the video remains a record of the 2024 project.
+The preview is rendered from the [self-contained HTML animation](docs/media/customos-demo.html). Download the HTML and open it in a browser for the interactive chapter controls. It reconstructs the project interface and labels illustrative process and resource data.
+
+[Original 2024 demonstration and LinkedIn post](https://lnkd.in/p/d_2DEMH8). The original footage is a historical reference. The maintained source restores Calculator as a four-operation utility and Notepad as a UTF-8 editor; the animation illustrates the project rather than asserting pixel-identical behavior across historical and maintained revisions.
 
 ## Maintenance
 
